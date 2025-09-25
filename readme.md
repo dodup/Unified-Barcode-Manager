@@ -19,7 +19,16 @@ A software in minimized window mode upon machine startup, that listen for a spec
 2. **Use** the HMI Datatype `UnifiedBarcodeReader` from the Types to create an internal HMI Tag called `_BarcodeReader_`.
 4. **Create** a scheduled task with a tag trigger of `_BarcodeReader_.Trigger`.
 	- Add the event script to it:
-	>> <code>if (Tags("_BarcodeReader_.Trigger").Read()){<br>//Do something in the system<br>HMIRuntime.Tags.SysFct.IncreaseTag("HMI_Tag_1", 1);<br>//Reset the trigger bit<br>HMIRuntime.Timers.SetTimeout(function(){<br>Tags("_BarcodeReader_.Trigger").Write(0)<br>},500);<br>}</code>
+```js
+if (Tags("_BarcodeReader_.Trigger").Read()) {
+    // Do something in the system
+    HMIRuntime.Tags.SysFct.IncreaseTag("HMI_Tag_1", 1);
+
+    // Reset the trigger bit
+    HMIRuntime.Timers.SetTimeout(function() {
+        Tags("_BarcodeReader_.Trigger").Write(0);
+    }, 500);
+}
 5. **Replace** the line under `//Do something in the system`, by the action you want to take in your application.
 
 ![Internal Tag](./media/UBM-Tag.png)
