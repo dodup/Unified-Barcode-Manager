@@ -1,7 +1,7 @@
 # Unified Barcode Manager
 A software in minimized window mode upon machine startup, that listen for a specific hardware ID of the computer and pass the information to the running WinCC Unified PC Runtime, without having to focus a specific field in the Unified application. **Because this program use the ODK of Unified, you must have all the valid licenses on your system in order to have this properly running. If a license if missing on your system, this will prevent the program the communicate with the Unified Runtime.**
 
-**To be able to run the executable, you will need .NET Runtime 8, that you can download it at: [.NET Runtime 8.0.20]([http://example.com](https://dotnet.microsoft.com/en-us/download/dotnet/8.0))
+**To be able to run the executable, you will need .NET Runtime 8, that you can download it at: [.NET Runtime 8.0.20](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)**
 
 ## Installation Steps
 1. **Download** the file package `UBM_V1.0.0.zip` from the `Releases` section on the right.
