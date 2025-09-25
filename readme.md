@@ -29,6 +29,7 @@ if (Tags("_BarcodeReader_.Trigger").Read()) {
         Tags("_BarcodeReader_.Trigger").Write(0);
     }, 500);
 }
+```
 5. **Replace** the line under `//Do something in the system`, by the action you want to take in your application.
 
 ![Internal Tag](./media/UBM-Tag.png)
